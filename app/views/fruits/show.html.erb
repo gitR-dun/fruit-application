@@ -5,3 +5,10 @@ I'm the show
 <p>season: <%= @fruit.season %></p>
 <p>color: <%= @fruit.color %></p>
 <p>taste: <%= @fruit.taste %></p>
+
+<br>
+<%= form_tag "/fruits/#{@fruit.id}", method: :delete do %>
+  <button>Delete me</button>
+<% end %>
+
+<%= button_to "delete this", "/fruits/#{@fruit.id}", method: :delete %>

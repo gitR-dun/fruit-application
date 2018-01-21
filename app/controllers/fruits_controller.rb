@@ -41,4 +41,10 @@ class FruitsController < ApplicationController
     )
     redirect_to "/fruits"
   end
+
+  def destroy
+    fruit = Fruit.find_by(id: params[:id])
+    fruit.destroy
+    redirect_to "/fruits"
+  end
 end
