@@ -1,0 +1,7 @@
+<%= form_tag "/fruits/#{@fruit.id}", method: :patch do %>
+  <p>color: <input type="text" name="input_color" value="<%= @fruit.color %>"></p>
+  <p>season: <input type="text" name="input_season" value="<%= @fruit.season %>"></p>
+  <p>name: <input type="text" name="input_name" value="<%= @fruit.name %>"></p>
+  <p>taste: <input type="text" name="input_taste" value="<%= @fruit.taste %>"></p>
+  <input type="submit" value="Edit a fruit">
+<% end %>
